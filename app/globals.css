@@ -57,9 +57,7 @@
 .cl-socialButtonsProviderIcon__github {
   filter:invert(1);
 }
-.cl-userButtonPopoverActionButtonIcon {
-  color: black;
-}
+
 
 .cl-logoBox {
   height: 40px;
@@ -76,9 +74,7 @@
 .cl-internal-wkkub3 {
   color: white;
 }
-.cl-userButtonPopoverActionButton {
-  color: black;
-}
+
 
 .cl-userButtonPopoverActionButton:hover{
   color:aqua;

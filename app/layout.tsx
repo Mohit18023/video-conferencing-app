@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -5,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "@/components/ui/toaster";
 import '@stream-io/video-react-sdk/dist/css/styles.css';
 import 'react-datepicker/dist/react-datepicker.css'
+import { ThemeProvider } from "@/components/Theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -35,7 +37,17 @@ export default function RootLayout({
 
         }
       }}>
-      <body className={`${inter.className} bg-custom-gradient `}>{children}
+      <body className={`${inter.className} bg-custom-gradient`}>
+        
+        
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
 
         <Toaster/>
       </body>

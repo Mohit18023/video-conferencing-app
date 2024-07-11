@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { avatarImages } from "@/constants";
 import { useToast } from "./ui/use-toast";
-
+import { useTheme } from "next-themes";
 interface MeetingCardProps {
   title: string;
   date: string;
@@ -29,9 +29,10 @@ const MeetingCard = ({
   buttonText,
 }: MeetingCardProps) => {
   const { toast } = useToast();
+  const {theme}=useTheme();
 
   return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px]  bg-white bg-opacity-30 backdrop-blur-lg border border-white border-opacity-20 px-5 py-8 xl:max-w-[568px]">
+    <section className={`flex min-h-[258px] w-full flex-col justify-between rounded-[14px] ${theme==="dark"?"bg-dark-2":" bg-white bg-opacity-30 backdrop-blur-lg border border-white border-opacity-20"} px-5 py-8 xl:max-w-[568px]`}>
       <article className="flex flex-col gap-5">
         <Image src={icon} alt="upcoming" width={28} height={28} />
         <div className="flex justify-between">

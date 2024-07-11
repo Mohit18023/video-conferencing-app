@@ -12,9 +12,10 @@ import Link from 'next/link'
 import { sidebarLinks } from '@/constants'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-  
+import { useTheme } from 'next-themes'
 const MobileNav = () => {
     const pathname=usePathname();
+    const {theme}=useTheme();
   return (
     <section className='w-full  max-w-[264px] '>
       <Sheet>
@@ -25,7 +26,7 @@ const MobileNav = () => {
     alt='hamburge icon'
     className='curson-pointer sm:hidden'></Image>
   </SheetTrigger>
-  <SheetContent side="left" className='border-none  bg-white bg-opacity-30 backdrop-blur-lg border border-white border-opacity-20'>
+  <SheetContent side="left" className={`border-none ${theme==="dark"?"bg-dark-2":" bg-white bg-opacity-30 backdrop-blur-lg border border-white border-opacity-20"}`}>
   <Link href="/" className='flex items-center gap-1 '>
         <Image 
         src='/icons/logo.svg'
