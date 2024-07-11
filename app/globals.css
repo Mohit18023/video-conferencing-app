@@ -58,7 +58,7 @@
   filter:invert(1);
 }
 .cl-userButtonPopoverActionButtonIcon {
-  color: white;
+  color: black;
 }
 
 .cl-logoBox {
@@ -77,7 +77,11 @@
   color: white;
 }
 .cl-userButtonPopoverActionButton {
-  color: white;
+  color: black;
+}
+
+.cl-userButtonPopoverActionButton:hover{
+  color:aqua;
 }
 .gradient-text {
   background:  linear-gradient(90deg, hsla(175, 79%, 63%, 1) 0%, hsla(82, 96%, 57%, 1) 100%);

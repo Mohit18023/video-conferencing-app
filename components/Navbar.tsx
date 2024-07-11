@@ -17,8 +17,15 @@ const Navbar = () => {
         <p className='text-[26px] font-extrabold gradient-text max-sm:hidden'>Meetiyor</p>
       </Link>
       <div className='flex-between gap-5'>
-      <SignedIn>
-              <UserButton />
+      <SignedIn >
+              <UserButton  appearance={{
+              elements: {
+                userButtonPopoverMain: "text-black bg-white bg-opacity-30 backdrop-blur-lg border border-white border-opacity-20 ",
+                userButtonPopoverFooter :"hidden",
+               
+                
+            },
+            }} />
             </SignedIn>
         <MobileNav/>
       </div>
