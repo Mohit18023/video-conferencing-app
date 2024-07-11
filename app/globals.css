@@ -79,7 +79,13 @@
 .cl-userButtonPopoverActionButton {
   color: white;
 }
-
+.gradient-text {
+  background:  linear-gradient(90deg, hsla(175, 79%, 63%, 1) 0%, hsla(82, 96%, 57%, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 /* =============================== */
 
 @layer utilities {

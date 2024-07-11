@@ -95,7 +95,7 @@ const MeetingTypeList = () => {
         title='Join Meeting'
         description='Via Invitation Link'
         handleClick={()=>setMeetingState('isJoiningMeeting')}
-        className='bg-yellow-1'
+        className='bg-yellow-1 '
        />
        {!callDetails?(
         <MeetingModal isOpen={MeetingState==='isScheduleMeeting'} onClose={()=>setMeetingState(undefined)} title="create Meeting"  handleClick={createMeeting}>

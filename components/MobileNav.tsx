@@ -16,7 +16,7 @@ import { cn } from '@/lib/utils'
 const MobileNav = () => {
     const pathname=usePathname();
   return (
-    <section className='w-full  max-w-[264px]'>
+    <section className='w-full  max-w-[264px] '>
       <Sheet>
   <SheetTrigger asChild>
     <Image src='/icons/hamburger.svg' 
@@ -25,7 +25,7 @@ const MobileNav = () => {
     alt='hamburge icon'
     className='curson-pointer sm:hidden'></Image>
   </SheetTrigger>
-  <SheetContent side="left" className='border-none bg-dark-1'>
+  <SheetContent side="left" className='border-none  bg-white bg-opacity-30 backdrop-blur-lg border border-white border-opacity-20'>
   <Link href="/" className='flex items-center gap-1 '>
         <Image 
         src='/icons/logo.svg'
@@ -44,7 +44,7 @@ const MobileNav = () => {
             <SheetClose asChild key={link.route}>
             <Link href={link.route} 
                   key={link.label}
-                  className={cn('flex gap-4 items-center p-4 rounded-lg w-full max-w-60',{
+                  className={cn('flex gap-4 items-center p-4 rounded-lg w-full max-w-60 ',{
                     'bg-blue-1':isActive
                   })}
                   >

@@ -59,6 +59,8 @@ const config = {
       },
       backgroundImage: {
         hero: "url('/images/hero-background.png')",
+         'gradient': "linear-gradient(90deg, rgba(23,242,218,1) 0%, rgba(9,112,127,1) 43%, rgba(9,107,121,1) 46%, rgba(0,212,255,1) 81%)",
+         'custom-gradient': 'linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%)',
       },
     },
   },
