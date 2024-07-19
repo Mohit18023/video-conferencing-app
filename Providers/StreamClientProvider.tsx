@@ -27,6 +27,9 @@ import { ReactNode, useEffect, useState } from 'react';
             image:user?.imageUrl,
           },
           tokenProvider,
+            options: {
+      wsURL: wss://chat.stream-io-api.com // Use the secure WebSocket URL
+    }
         })
         setVideoClient(client);
   },[user,isLoaded]);
