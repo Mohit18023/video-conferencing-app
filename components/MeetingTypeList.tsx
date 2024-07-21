@@ -26,8 +26,9 @@ const MeetingTypeList = () => {
   const [callDetails, setCallDetails] = useState<Call>();
   const { toast } = useToast();
   const createMeeting = async () => {
-    if (!user || !client) return;
+    
     console.log("this is user " +user);
+    if (!user || !client) return;
     console.log(client)
     try {
       if (!values.dateTime) {
